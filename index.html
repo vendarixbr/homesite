@@ -305,4 +305,19 @@
 </script>
 
 
-</body></html>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+	var elems = document.querySelectorAll('button[onclick*="ggcheckout.app"], a[href*="ggcheckout.app"]');
+	elems.forEach(function(el){
+		if(!el) return;
+		if(el.tagName.toLowerCase() === 'button'){
+			el.setAttribute('onclick', "window.open('https://pay.cakto.com.br/dc7dugk_890851','_blank')");
+		} else if(el.tagName.toLowerCase() === 'a'){
+			el.setAttribute('href', 'https://pay.cakto.com.br/dc7dugk_890851');
+			el.setAttribute('target', '_blank');
+		}
+	});
+});
+</script>
+</html>
